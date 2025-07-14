@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-good_models = joblib.load('/Users/aidenfine/Downloads/good_college_models.pkl')
+good_models = joblib.load('good_college_models.pkl')
 
 st.title("College Admission Predictor")
 
