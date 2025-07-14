@@ -6,6 +6,16 @@ good_models = joblib.load('good_college_models.pkl')
 
 st.title("College Admission Predictor")
 
+
+
+
+agree = st.checkbox("I understand that this prediction tool is NOT 100% accurate and should be used as a supplementary guide only.")
+
+if not agree:
+    st.warning("Please check the box to acknowledge the disclaimer before using the app.")
+    st.stop()  # Stop running the app if not checked
+
+
 st.markdown("Enter your academic details below to predict your admission outcome.")
 
 gpa = st.number_input("Unweighted GPA", min_value=0.0, max_value=4.0, step=0.1)
