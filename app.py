@@ -9,11 +9,14 @@ st.title("College Admission Predictor")
 
 
 
-agree = st.checkbox("I understand that this prediction tool is NOT 100% accurate and should be used as a supplementary guide only.")
+
+agree = st.checkbox(
+    "I understand that this prediction tool is NOT 100% accurate and should be used as a supplementary guide only."
+)
 
 if not agree:
     st.warning("Please check the box to acknowledge the disclaimer before using the app.")
-    st.stop()  # Stop running the app if not checked
+    st.stop() 
 
 
 st.markdown("Enter your academic details below to predict your admission outcome.")
