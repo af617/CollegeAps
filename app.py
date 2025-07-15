@@ -90,7 +90,7 @@ if st.button("Predict Admission"):
 
     model = good_models[college_choice]
 
-    proba = model.predict_proba(input_df)[0][1]  # Probability of acceptance
+
     
 
     
@@ -99,7 +99,34 @@ if st.button("Predict Admission"):
         prediction = 'Denied'
     elif prediction == 1:
         prediction = 'Accepted'
+    
+     
     st.success(f"Prediction for {college_choice}: {prediction}")
-    st.write(f"Chance of acceptance: {proba:.1%}")
+
+    st.markdown("### Why this prediction?")
+
+    reasons = []
+    if gpa < 3.0:
+        reasons.append("- Your GPA is below average for many colleges, which can lower admission chances.")
+    else:
+        reasons.append("- Your GPA is competitive, boosting your admission chances.")
+
+    if ap_classes < 5:
+        reasons.append("- Taking more AP/Dual Enrollment classes can strengthen your application.")
+    else:
+        reasons.append("- You have taken a strong number of AP/Dual Enrollment classes.")
+
+    if math_level_encoded < 2:
+        reasons.append("- Consider taking higher-level math courses to improve your profile.")
+
+    if race == 1:
+        reasons.append("- Some colleges consider diversity factors during admissions.")
+
+    if schooltype == 1:
+        reasons.append("- Coming from a public high school might impact your application depending on the college.")
+
+    for line in reasons:
+        st.write(line)
+   
 
 
