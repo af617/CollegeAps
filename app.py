@@ -90,11 +90,16 @@ if st.button("Predict Admission"):
 
     model = good_models[college_choice]
 
+    proba = model.predict_proba(input_df)[0][1]  # Probability of acceptance
+    
+
+    
     prediction = model.predict(input_df)[0]
     if prediction == 0:
         prediction = 'Denied'
     elif prediction == 1:
         prediction = 'Accepted'
     st.success(f"Prediction for {college_choice}: {prediction}")
+    st.write(f"Chance of acceptance: {proba:.1%}")
 
 
