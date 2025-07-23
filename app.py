@@ -37,6 +37,7 @@ math_mapping = {
     "Algebra II": 1,
     "Business Math": 1.2,
     "College Algebra": 1.5,
+    "Math Analysis": 1.8
     "Pre-Calculus": 2,
     "Math AI SL": 2.4,
     "Statistics": 2.5,
