@@ -72,9 +72,9 @@ schooltype_label = st.selectbox("School Type", list(schooltype_options.keys()))
 schooltype = schooltype_options[schooltype_label]
 
 desired_colleges = [
-    'Arizona State', 'Baylor', 'Brown', 'California Polytechnic State University-Pomona', 
-    'Chapman University', 'Duke University', 'Oregon State University', 
-    'University of Chicago', 'University of Florida'
+    'Arizona State', 'Baylor', 'Brown', 
+    'Duke University', 'Oregon State University', 
+    'University of Chicago'
 ]
 
 
