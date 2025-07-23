@@ -73,7 +73,7 @@ schooltype = schooltype_options[schooltype_label]
 
 desired_colleges = [
     'Arizona State', 'Baylor', 'Brown', 'California Polytechnic State University-Pomona', 
-    'Chapman University', 'Duke', 'Oregon State University', 'Pomona College', 
+    'Chapman University', 'Duke University', 'Oregon State University', 'Pomona College', 
     'University of Chicago', 'University of Florida'
 ]
 
