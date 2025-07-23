@@ -71,12 +71,16 @@ race = race_options[race_label]
 schooltype_label = st.selectbox("School Type", list(schooltype_options.keys()))
 schooltype = schooltype_options[schooltype_label]
 
-college_choice = st.selectbox(
-    "Select College", 
-    ['Arizona State', 'Baylor', 'Brown', 'California Polytechnic State University-Pomona', 
-     'Chapman University', 'Duke', 'Oregon State University', 'Pomona College', 
-     'University of Chicago', 'University of Florida']
-)
+desired_colleges = [
+    'Arizona State', 'Baylor', 'Brown', 'California Polytechnic State University-Pomona', 
+    'Chapman University', 'Duke', 'Oregon State University', 'Pomona College', 
+    'University of Chicago', 'University of Florida'
+]
+
+
+available_colleges = [college for college in desired_colleges if college in good_models]
+
+college_choice = st.selectbox("Select College", available_colleges)
 
 if st.button("Predict Admission"):
     # Use the corrected variable names here
