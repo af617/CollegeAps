@@ -97,13 +97,14 @@ if st.button("Predict Admission"):
     prediction = model.predict(input_df)[0]
     if prediction == 0:
         prediction = 'Denied'
+        st.error(f"Prediction for {college_choice}: {prediction}")
     elif prediction == 1:
         prediction = 'Accepted'
-    proba = model.predict_proba(input_df)[0][1]
-    st.write(f"Probability of acceptance: {proba:.2%}")
+        st.success(f"Prediction for {college_choice}: {prediction}")
+    
 
      
-    st.success(f"Prediction for {college_choice}: {prediction}")
+    
 
     st.markdown("### Why this prediction?")
 
