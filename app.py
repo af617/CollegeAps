@@ -4,7 +4,7 @@ import joblib
 
 good_models = joblib.load('good_college_models_smoted.pkl')
 
-st.title("College Admission Predictor")
+st.title("College Admission Predictor (Beta)")
 
 
 
