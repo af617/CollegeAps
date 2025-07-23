@@ -11,7 +11,7 @@ st.title("College Admission Predictor")
 
 
 agree = st.checkbox(
-    "I understand that this prediction tool is NOT 100% accurate and should be used as a supplementary guide only."
+    "I understand that this prediction tool is NOT 100% accurate and should be used as a supplementary guide only. There are many more factors that go into the college admissions process, such as extracurriculars, test scores, and essays. This tool is used to determine admissions BASED ON A COMPARISON TO 6342 OTHER STUDENTS."
 )
 
 if not agree:
@@ -72,7 +72,7 @@ schooltype_label = st.selectbox("School Type", list(schooltype_options.keys()))
 schooltype = schooltype_options[schooltype_label]
 
 desired_colleges = [
-    'Arizona State University', 'Baylor University', 'Brown University', 
+    'Baylor University',
     'Duke University', 'Oregon State University', 
     'University of Chicago'
 ]
